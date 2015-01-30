@@ -31,13 +31,23 @@ func main() {
 
 	}
 
+	fmt.Println("")
 	fmt.Println(keys(m))
 }
 
-func keys(s string, i int) {
+func keys(m map[string]int) ([]string, []int) {
 
-	k := []string{age["jeremy"], age["jordie"], age["josh"]}
+	keys := []string{}
+	v := []int{}
 
-	return k
+	for k, _ := range m {
+		keys = append(keys, k)
+	}
+
+	for _, l := range m {
+		v = append(v, l)
+	}
+
+	return keys, v
 
 }
