@@ -37,14 +37,10 @@ func main() {
 
 func keys(m map[string]int) ([]string, []int) {
 
-	keys := []string{}
-	v := []int{}
+	keys, v := []string{}, []int{}
 
-	for k, _ := range m {
+	for k, l := range m {
 		keys = append(keys, k)
-	}
-
-	for _, l := range m {
 		v = append(v, l)
 	}
 
